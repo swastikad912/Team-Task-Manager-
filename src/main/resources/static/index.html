@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Task Manager</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<main class="container">
+    <h1>Team Task Manager</h1>
+
+    <section class="card" id="authSection">
+        <h2>Signup</h2>
+        <form id="signupForm">
+            <input id="signupName" placeholder="Name" required>
+            <input id="signupEmail" type="email" placeholder="Email" required>
+            <input id="signupPassword" type="password" placeholder="Password" required>
+            <button type="submit">Create Account</button>
+        </form>
+
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input id="loginEmail" type="email" placeholder="Email" required>
+            <input id="loginPassword" type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <section class="card hidden" id="appSection">
+        <div class="row">
+            <h2 id="welcomeText">Dashboard</h2>
+            <button id="logoutBtn">Logout</button>
+        </div>
+        <p id="flash"></p>
+
+        <h3>Dashboard Summary</h3>
+        <pre id="summaryBox"></pre>
+
+        <h3>Create Project</h3>
+        <form id="projectForm">
+            <input id="projectName" placeholder="Project name" required>
+            <input id="projectDescription" placeholder="Description">
+            <button type="submit">Create Project</button>
+        </form>
+
+        <h3>Your Projects</h3>
+        <select id="projectSelect"></select>
+        <button id="loadProjectBtn">Load Project Details</button>
+        <pre id="projectDetailsBox"></pre>
+
+        <h3>Add Member (Admin only)</h3>
+        <form id="memberForm">
+            <select id="userSelect"></select>
+            <select id="memberRole">
+                <option value="MEMBER">MEMBER</option>
+                <option value="ADMIN">ADMIN</option>
+            </select>
+            <button type="submit">Add Member</button>
+        </form>
+
+        <h3>Create Task (Admin only)</h3>
+        <form id="taskForm">
+            <input id="taskTitle" placeholder="Task title" required>
+            <input id="taskDescription" placeholder="Task description">
+            <input id="taskDueDate" type="date" required>
+            <select id="assigneeSelect"></select>
+            <button type="submit">Create Task</button>
+        </form>
+
+        <h3>Project Tasks</h3>
+        <button id="loadTasksBtn">Load Tasks</button>
+        <pre id="tasksBox"></pre>
+    </section>
+</main>
+
+<script src="/app.js"></script>
+</body>
+</html>
